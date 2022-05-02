@@ -27,3 +27,7 @@ export const ItemStyled = styled.div`
     justity-content: space-between;
     min-width: 150px;
 `
+
+export const TypographyStyled = styled(Typography)`
+    margin-right: 45px;
+`

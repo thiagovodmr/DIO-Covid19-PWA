@@ -2,7 +2,7 @@ import React, {memo} from "react";
 // import RefreshIcon from "../../../assets/images/refresh.ext"
 import {Card, Typography, Button, Select, MenuItem } from "../../../components";
 import COUNTRIES from "../../../commons/constants/countries"
-import { CardPanelContentStyled, ItemStyled } from "./style";
+import { CardPanelContentStyled, ItemStyled, TypographyStyled } from "./style";
 
 const navigatorHasShare = navigator.share
 
@@ -54,15 +54,15 @@ function Panel({updateAt, onChange, data, country, getCoviddata}){
         <Card>
             <CardPanelContentStyled>
                 <div>
-                    <Typography variant="h5" component="span" color="primary">
+                    <TypographyStyled variant="h5" component="span" color="primary">
                         COVID19
-                    </Typography>
-                    <Typography variant="h6" component="span" color="primary">
+                    </TypographyStyled>
+                    <TypographyStyled variant="h6" component="span" color="primary">
                         Painel Coronavirus
-                    </Typography>
-                    <Typography variant="body2" component="span" color="primary">
+                    </TypographyStyled>
+                    <TypographyStyled variant="body2" component="span" color="primary">
                         Atualizado em {updateAt}
-                    </Typography>
+                    </TypographyStyled>
                     <div className="pt-2"> 
                         <Select onChange ={onChange} value={country}>
                             { COUNTRIES.map(renderContries) }
